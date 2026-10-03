@@ -21,7 +21,7 @@ const PROJECTS = [
       "Firestore stores each user's data and activity across sessions"
     ],
     stack: ["Next.js", "React", "Firebase", "Firestore"],
-    live: "",   // TODO: paste your ScholarAI deployment URL here
+    live: "https://scholarai-edu.vercel.app/",   // TODO: paste your ScholarAI deployment URL here
     code: ""    // TODO: paste the repo URL if it is public
   }
 ];
