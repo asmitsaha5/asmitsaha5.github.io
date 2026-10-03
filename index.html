@@ -1,118 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Asmit Saha | Portfolio</title>
-    <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Asmit Saha · Full-stack developer</title>
+  <meta name="description" content="Portfolio of Asmit Saha, B.Tech CSE student building full-stack and AI-powered web apps.">
+
+  <!-- Fonts: loaded from Google, styled in style.css -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Our own stylesheet: this line is the "link" between HTML and CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <h1>Asmit Saha</h1>
-        <p>B.Tech CSE Student | KIIT, Bhubaneswar</p>
-        <p><a href="mailto:asmitsaha5@gmail.com">asmitsaha5@gmail.com</a> | +91-8900618133</p>
-        <p>Bhubaneswar, Odisha, India</p>
-        <nav>
-            <a href="#education">Education</a>
-            <a href="#skills">Skills</a>
-            <a href="#projects">Projects</a>
-            <a href="#achievements">Achievements</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <!-- Education Section -->
-        <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>Kalinga Institute of Industrial Technology (2023 – Present)</strong><br>
-                    Bachelor of Technology in Computer Science and Engineering<br>
-                    CGPA: 7.7<br>
-                    Bhubaneswar, Odisha
-                </li>
-                <li>
-                    <strong>Dabcha Nabakola High School (2021 – 2023)</strong><br>
-                    12th W.B. Board Exam – 70%<br>
-                    C.K Road, West Bengal
-                </li>
-                <li>
-                    <strong>Chandrakona Road Saradamoyee High School (2015 – 2021)</strong><br>
-                    10th W.B. Board Exam – 89%<br>
-                    C.K Road, West Bengal
-                </li>
-            </ul>
-        </section>
+  <!-- 1. NAV: anchors (#about) scroll to the section with the matching id -->
+  <header class="nav">
+    <a class="nav__brand" href="#top">Asmit Saha</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <!-- Step 3 adds: Stats. -->
+    </nav>
+  </header>
 
-        <!-- Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <p><strong>Languages:</strong> C/C++, HTML/CSS, Python, JavaScript, SQL</p>
-            <p><strong>Developer Tools:</strong> VS Code, Git, GitHub, Cisco packet tracer, React</p>
-            <p><strong>Coursework:</strong> Data Structures, Operating System, Object-Oriented Programming, Database
-                Management System, Computer Networks, Machine Learning, Artificial Intelligence</p>
-        </section>
+  <main id="top">
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
+    <!-- 2. HERO -->
+    <section class="hero">
+      <div class="hero__text">
+        <h1>I build web apps that actually ship.</h1>
+        <p class="hero__lead">
+          Final-year CS student at KIIT. I make full-stack and AI-powered products
+          with React, Next.js and Firebase, from a chess engine with Minimax AI
+          to an academic assistant built at a hackathon.
+        </p>
+        <div class="hero__links">
+          <a class="btn btn--primary" href="https://github.com/asmitsaha5" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/asmit-saha-a57794285/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="mailto:asmitsaha5@gmail.com">Email me</a>
+        </div>
+      </div>
+      <!-- The chessboard is pure CSS, no image file needed -->
+      <div class="board" aria-hidden="true"><span>♞</span></div>
+    </section>
 
-            <div>
-                <h3>Chess Game – Web-Based Application</h3>
-                <p>Link to the <a href="https://chess-game-2b2s.vercel.app/" target="_blank">Game</a></p>
+    <!-- 3. ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <p>
+        I'm a B.Tech Computer Science student at KIIT (expected May 2027). I like
+        turning ideas into deployed, working products, and I practise competitive
+        programming regularly to keep my problem-solving and CS fundamentals sharp.
+      </p>
+    </section>
 
-                <ul>
-                    <li><a href="https://github.com/asmitsaha5/chess-game" target="_blank">View Project on GitHub</a>
-                    </li>
-                    <li>Built with React.js and JavaScript; 95% rule-accurate chess logic.</li>
-                    <li>Responsive 8×8 board using HTML/CSS, works on all screen sizes.</li>
-                    <li>Optimized state management to reduce re-renders by 30%.</li>
-                    <li>300+ views and 20+ GitHub stars from the community.</li>
-                </ul>
-            </div>
-        </section>
+        <!-- PROJECTS: the cards are NOT written here. script.js builds them from projects.js -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div id="project-list" class="projects"></div>
+      <p class="more">More practice and coursework repos:
+        <a href="https://github.com/asmitsaha5/LeetcodeProblems" target="_blank" rel="noopener">LeetCode</a>,
+        <a href="https://github.com/asmitsaha5/Codeforces" target="_blank" rel="noopener">Codeforces</a>,
+        <a href="https://github.com/asmitsaha5/Data-Structure" target="_blank" rel="noopener">Data Structures</a>,
+        <a href="https://github.com/asmitsaha5/Machine-Learning-Capstone" target="_blank" rel="noopener">ML Capstone</a>.
+      </p>
+    </section>
 
-        <!-- Achievements Section -->
-        <section id="achievements">
-            <h2>Achievements & Extracurriculars</h2>
-            <ul>
-                <li>Solved 50+ LeetCode problems – improving DSA and problem-solving skills.</li>
-                <li>50+ problems solved on Codeforces; max rating 891.</li>
-                <li>Participated in 10+ Codeforces contests.</li>
-                <li>Active participant in KIIT contests like IOT-LAB-KIIT and KODEWRECK-KIIT.</li>
-                <li>Google Cloud Arcade Participant (2025) – Hands-on with Compute Engine, Cloud Storage, BigQuery,
-                    Vertex AI.</li>
-            </ul>
-        </section>
+    <!-- 4. SKILLS -->
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <dl class="skills">
+        <dt>Languages</dt>
+        <dd>C/C++, Python, JavaScript, SQL</dd>
+        <dt>Web &amp; cloud</dt>
+        <dd>React, Next.js, Firebase, Google Cloud Platform, Vercel</dd>
+        <dt>Tools</dt>
+        <dd>Git, GitHub, VS Code, Codex, Claude</dd>
+        <dt>Coursework</dt>
+        <dd>Data Structures, Operating Systems, OOP, DBMS, Computer Networks, Software Engineering, AI, Machine Learning</dd>
+      </dl>
+    </section>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Email: <a href="mailto:asmitsaha5@gmail.com">asmitsaha5@gmail.com</a></p>
-            <p>Phone: +91-8900618133</p>
-            <p>Location: Bhubaneswar, Odisha, India</p>
-            <p>
-                <a href="https://github.com/asmitsaha5" target="_blank">GitHub</a> |
-                <a href="https://leetcode.com/asmitsaha5" target="_blank">LeetCode</a> |
-                <a href="https://linkedin.com/in/asmit-saha" target="_blank">LinkedIn</a>
-            </p>
-            <p>📄 View My
-                <a class="resume-link"
-                    href="https://drive.google.com/file/d/1WfHrSUrbooB1oUvqUGrR6m1jrz6QXOh6/view?usp=drive_link"
-                    target="_blank">
-                    Resume
-                </a>
-            </p>
+  </main>
 
-        </section>
-    </main>
+  <footer class="footer">
+    <p>© 2026 Asmit Saha</p>
+  </footer>
 
-    <footer>
-        <p>© 2025 Asmit Saha</p>
-    </footer>
+  <script src="projects.js"></script>
+  <script src="script.js"></script>
 </body>
-
 </html>
